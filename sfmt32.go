@@ -6,6 +6,10 @@ type SFMT32 struct {
 	x      []uint32
 }
 
+func int2long(u, l uint32) uint64 {
+	return uint64(u)<<32 | uint64(l)
+}
+
 func NewSFMT32(params Params) *SFMT32 {
 	sfmt := &SFMT32{
 		params: params,
