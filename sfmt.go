@@ -1,28 +1,28 @@
-package gosfmt
+package mt
 
 import "fmt"
 
 type Params struct {
-	MEXP    uint32
-	POS1    uint32
-	SL1     uint32
-	SL2     uint32
-	SR1     uint32
-	SR2     uint32
-	MSK1    uint32
-	MSK2    uint32
-	MSK3    uint32
-	MSK4    uint32
-	parity  [4]uint32
-	N       uint32
-	N32     uint32
-	N64     uint32
-	IDSTR   string
-	fSR2    uint32
-	fSL2    uint32
-	rSR2    uint32
-	rSL2    uint32
-	POS     uint32
+	MEXP   uint32
+	POS1   uint32
+	SL1    uint32
+	SL2    uint32
+	SR1    uint32
+	SR2    uint32
+	MSK1   uint32
+	MSK2   uint32
+	MSK3   uint32
+	MSK4   uint32
+	parity [4]uint32
+	N      uint32
+	N32    uint32
+	N64    uint32
+	IDSTR  string
+	fSR2   uint32
+	fSL2   uint32
+	rSR2   uint32
+	rSL2   uint32
+	POS    uint32
 }
 
 func NewParams(mexp uint32, pos1 uint32, sl1 uint32, sl2 uint32, sr1 uint32, sr2 uint32,
@@ -88,7 +88,7 @@ func init() {
 		330, 5, 3, 9, 3,
 		0xeffffffb, 0xdfbebfff, 0xbfbf7bef, 0x9ffd7bff,
 		[4]uint32{0x00000001, 0x00000000, 0xa3ac4000, 0xecc1327a})
-	params86243 = NewParams	(86243,
+	params86243 = NewParams(86243,
 		366, 6, 7, 19, 1,
 		0xfdbffbff, 0xbff7ff3f, 0xfd77efff, 0xbf9ff3ff,
 		[4]uint32{0x00000001, 0x00000000, 0x00000000, 0xe9528d85})
